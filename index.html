@@ -1,11 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busca Binária</title>
+    <link href="script.js">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
+
+<body class="body">
+    <div class="title">
+        <h1>BUSCA BINÁRIA</h1>
+        <h5>Um jogo para Arquitetar seu Conhecimento</h5>
+    </div>
+
+    <div class="container_Perguntas">
+        <label class="enunciado">1. Desenhe sobre um esquema básico de arquitetura de computadores e seus
+            componentes</label>
+        <input id="ipt_R1"><br><br>
+
+        <label class="enunciado">2. Giovanna (estudante de medicina) tem como atividade buscar conceitos que representem
+            o funcionamento do cerébro humano, seu namorado Matheus lhe deu a ideia de pesquisar sobre o funcionamento
+            de um computador.
+            Através dessa busca Giovanna achou um componente que pode ser comparado ao cerébro humano. Qual é ele?
+        </label>
+        <input id="ipt_R2"><br><br>
+
+        <label class="enunciado">3. Levando em consideração os componentes da CPU (______ ,UC e Registradores), qual se
+            encaixa nessa descrição.
+            Um aluno realizando a lógica da atividade do Frizza.
+        </label>
+        <input id="ipt_R3"><br><br>
+
+        <label class="enunciado">4. Levando em consideração os componentes da CPU (ULA,UC e _______).
+            Relacione: Um cartério que possuí vários cadernos para armazenar dados dos seus passados e futuros clientes.
+        </label>
+        <input id="ipt_R4"><br><br>
+
+        <label class="enunciado">5. A familía Memórias Silva possui seu membros. Descubra o nome deles baseado na
+            descrição comportamental:<br>
+            ___: Memória temporária onde dados são armazenados enquanto o computador está ligado<input id="ipt_R5a"><br><br>
+
+            ___: Memória permanente que guarda dados essenciais para o funcionamento do sistema, como o BIOS.<input id="ipt_R5b"><br><br>
+
+            ___: Sou filho da memória ROM, um tipo de chip de memória não volátil, o que significa que retenho as
+            informações armazenadas mesmo após o desligamento da energia. <br>
+            Permito apagar o conteúdo antigo e gravar um novo, o que é útil para atualizações de software em placas
+            eletrônicas.<input id="ipt_R5c"><br><br>
+
+            ___: Sou um tipo de armazenamento não volátil (não perco dados sem energia) usado para gravar e ler dados
+            eletronicamente.<br>
+            Sirvo como base para pen drives, SSDs, cartões de memória e celulares, oferecendo acesso rápido, resistência
+            a choques e baixo consumo de energia<input id="ipt_R5d"><br><br>
+
+            ___: Alguns me chamam de memória secundária mas não gosto, sou um componente de hardware projetado para
+            armazenar grandes volumes de dados de forma permanente (não volátil).<br>
+            Tenho capacidade de armazenar muitos volumes de dados e sou muito conhecido por 2 nomes especificos.<input id="ipt_R5e"><br><br>
+        </label>
+
+
+        <label class="enunciado">6. Levando em consideração seu conhecimento sobre Arquitetura Computacional. Relacione:
+            <br>
+            Sou um dado que está sendo trasnportado, e percebo que está um trânsito perto da avenida CPU, e meu destino
+            que é a memória permite que eu não passe por essa avenida, então decido pergar um “atalho”. <br>
+            Qual o nome desse atalho que permite acesso direto a memória? <input id="ipt_R6"><br><br>
+        </label>
+
+        <label class="enunciado">7. Levando em consideração seu conhecimento sobre Arquitetura Computacional
+            Oque eu sou? Um pino de controle em circuitos integrados (chips) que permite ao controlador principal (como
+            um microcontrolador) selecionar e ativar um dispositivo específico dentre vários conectados ao mesmo
+            barramento de dados. Tenho um apelido igual de um jogo FPS muito famoso. <input id="ipt_R7"><br><br>
+        </label>
+
+        <label class="enunciado">8. Sou um Dado e estou andando pela avenida ‘Barramentos’ e lá costuma ter placas que
+            possuem endereços para onde devo ir. Seguindo essa história do nosso amigo Dado.
+            Quais são esses tipos de barramentos?<input id="ipt_R8"><br><br>
+        </label>
+
+        <label class="enunciado">
+            9. Dada as seguintes descrições responda qual processador estamos nos referindo i5, i7:
+            1.
+            • Modelo: Core ____ (com vídeo) / 14400F (sem vídeo)
+            • Geração: 14ª Geração (Raptor Lake Refresh)
+            • Núcleos: 10 (6 P-cores + 4 E-cores)
+            • Threads: 16
+            • Clock Base: 2.5 GHz (P-core) / 1.8 GHz (E-core)
+            • Clock Turbo Máximo: 4.7 GHz
+            • Cache: 20 MB Intel® Smart Cache
+            • Litografia: Intel 7 (10nm)
+            • Soquete: LGA1700 [1, 2, 3, 4]
+            <input id="ipt_R9a">
+            <br><br>
+
+            2.
+            • Núcleos/Threads: 20 Núcleos / 28 Threads.
+            • Velocidade: Base 3.4 GHz (P-core) / Máx Turbo 5.6 GHz.
+            • Cache: 33 MB Intel Smart Cache / 28 MB L2 Cache.
+            • Soquete: LGA 1700.
+            • TDP (Potência Base/Turbo): 125W Base / 253W Max Turbo Power.
+            • Gráficos Integrados: Intel UHD Graphics 770.
+            • Compatibilidade de Memória: DDR5 5600 MT/s / DDR4 3200 MT/s
+            <input id="ipt_R9b">
+            <br><br>
+        </label>
+
+        <label class="enunciado">
+            10. Geralmente quando falamos que um processador tem N núcleos estamos nos referindo aos núcleos físicos e
+            lógicos dele, tendo em consideração dessa explicação. Um processador com essas especificações pode ser
+            chamado de: <input id="ipt_R10">
+            <br><br>
+        </label>
+
+        <button onclick="Tentativa()">Selecionar</button>
+    </div>
+
 </body>
+
 </html>
