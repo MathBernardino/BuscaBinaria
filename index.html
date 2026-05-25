@@ -7,114 +7,227 @@
     <title>Busca Binária</title>
     <link href="script.js">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body class="body">
-    <div class="title">
+    <div id="title" class="title">
         <h1>BUSCA BINÁRIA</h1>
         <h5>Um jogo para Arquitetar seu Conhecimento</h5>
+        <button class="btnJogar" onclick="jogar()">Jogar</button>
     </div>
 
-    <div class="container_Perguntas">
-        <label class="enunciado">1. Desenhe sobre um esquema básico de arquitetura de computadores e seus
-            componentes</label>
-        <input id="ipt_R1"><br><br>
+    <div id="container_Perguntas" class="container_Perguntas" style="display: none">
+        <b>1. Aqui está um desenho sobre um esquema básico de arquitetura de computadores e seus componentes</b>
 
-        <label class="enunciado">2. Giovanna (estudante de medicina) tem como atividade buscar conceitos que representem
-            o funcionamento do cerébro humano, seu namorado Matheus lhe deu a ideia de pesquisar sobre o funcionamento
-            de um computador.
-            Através dessa busca Giovanna achou um componente que pode ser comparado ao cerébro humano. Qual é ele?
-        </label>
-        <input id="ipt_R2"><br><br>
-
-        <label class="enunciado">3. Levando em consideração os componentes da CPU (______ ,UC e Registradores), qual se
-            encaixa nessa descrição.
-            Um aluno realizando a lógica da atividade do Frizza.
-        </label>
-        <input id="ipt_R3"><br><br>
-
-        <label class="enunciado">4. Levando em consideração os componentes da CPU (ULA,UC e _______).
-            Relacione: Um cartério que possuí vários cadernos para armazenar dados dos seus passados e futuros clientes.
-        </label>
-        <input id="ipt_R4"><br><br>
-
-        <label class="enunciado">5. A familía Memórias Silva possui seu membros. Descubra o nome deles baseado na
-            descrição comportamental:<br>
-            ___: Memória temporária onde dados são armazenados enquanto o computador está ligado<input id="ipt_R5a"><br><br>
-
-            ___: Memória permanente que guarda dados essenciais para o funcionamento do sistema, como o BIOS.<input id="ipt_R5b"><br><br>
-
-            ___: Sou filho da memória ROM, um tipo de chip de memória não volátil, o que significa que retenho as
-            informações armazenadas mesmo após o desligamento da energia. <br>
-            Permito apagar o conteúdo antigo e gravar um novo, o que é útil para atualizações de software em placas
-            eletrônicas.<input id="ipt_R5c"><br><br>
-
-            ___: Sou um tipo de armazenamento não volátil (não perco dados sem energia) usado para gravar e ler dados
-            eletronicamente.<br>
-            Sirvo como base para pen drives, SSDs, cartões de memória e celulares, oferecendo acesso rápido, resistência
-            a choques e baixo consumo de energia<input id="ipt_R5d"><br><br>
-
-            ___: Alguns me chamam de memória secundária mas não gosto, sou um componente de hardware projetado para
-            armazenar grandes volumes de dados de forma permanente (não volátil).<br>
-            Tenho capacidade de armazenar muitos volumes de dados e sou muito conhecido por 2 nomes especificos.<input id="ipt_R5e"><br><br>
-        </label>
-
-
-        <label class="enunciado">6. Levando em consideração seu conhecimento sobre Arquitetura Computacional. Relacione:
-            <br>
-            Sou um dado que está sendo trasnportado, e percebo que está um trânsito perto da avenida CPU, e meu destino
-            que é a memória permite que eu não passe por essa avenida, então decido pergar um “atalho”. <br>
-            Qual o nome desse atalho que permite acesso direto a memória? <input id="ipt_R6"><br><br>
-        </label>
-
-        <label class="enunciado">7. Levando em consideração seu conhecimento sobre Arquitetura Computacional
-            Oque eu sou? Um pino de controle em circuitos integrados (chips) que permite ao controlador principal (como
-            um microcontrolador) selecionar e ativar um dispositivo específico dentre vários conectados ao mesmo
-            barramento de dados. Tenho um apelido igual de um jogo FPS muito famoso. <input id="ipt_R7"><br><br>
-        </label>
-
-        <label class="enunciado">8. Sou um Dado e estou andando pela avenida ‘Barramentos’ e lá costuma ter placas que
-            possuem endereços para onde devo ir. Seguindo essa história do nosso amigo Dado.
-            Quais são esses tipos de barramentos?<input id="ipt_R8"><br><br>
-        </label>
-
-        <label class="enunciado">
-            9. Dada as seguintes descrições responda qual processador estamos nos referindo i5, i7:
-            1.
-            • Modelo: Core ____ (com vídeo) / 14400F (sem vídeo)
-            • Geração: 14ª Geração (Raptor Lake Refresh)
-            • Núcleos: 10 (6 P-cores + 4 E-cores)
-            • Threads: 16
-            • Clock Base: 2.5 GHz (P-core) / 1.8 GHz (E-core)
-            • Clock Turbo Máximo: 4.7 GHz
-            • Cache: 20 MB Intel® Smart Cache
-            • Litografia: Intel 7 (10nm)
-            • Soquete: LGA1700 [1, 2, 3, 4]
-            <input id="ipt_R9a">
-            <br><br>
-
-            2.
-            • Núcleos/Threads: 20 Núcleos / 28 Threads.
-            • Velocidade: Base 3.4 GHz (P-core) / Máx Turbo 5.6 GHz.
-            • Cache: 33 MB Intel Smart Cache / 28 MB L2 Cache.
-            • Soquete: LGA 1700.
-            • TDP (Potência Base/Turbo): 125W Base / 253W Max Turbo Power.
-            • Gráficos Integrados: Intel UHD Graphics 770.
-            • Compatibilidade de Memória: DDR5 5600 MT/s / DDR4 3200 MT/s
-            <input id="ipt_R9b">
-            <br><br>
-        </label>
-
-        <label class="enunciado">
-            10. Geralmente quando falamos que um processador tem N núcleos estamos nos referindo aos núcleos físicos e
-            lógicos dele, tendo em consideração dessa explicação. Um processador com essas especificações pode ser
-            chamado de: <input id="ipt_R10">
-            <br><br>
-        </label>
-
-        <button onclick="Tentativa()">Selecionar</button>
+        <img src="img/arquitetura.jpg">
+        <button id="btnIniciar" onclick="iniciar()" style="display: none;">Iniciar Quiz</button>
     </div>
+
+        
+
+        <div id="card" class="card" style="display: none;">
+        
+            <div id="quiz" style="display:none">
+                <div class="progresso" id="progresso"></div>
+                <div class="questao" id="questao"></div>
+                <div id="opcoes"></div>
+                <div class="feedback" id="feedback"></div>
+                <button id="btnProximo" onclick="proxima()">Próxima →</button>
+            </div>
+
+            <div id="resultado" style="display: none;">
+                <h2>Resultado</h2>
+                <p id="pontuacao"></p>
+                <p id="mensagem"></p>
+                <button id="btnReiniciar" onclick="reiniciar()">Tentar novamente</button>
+            </div>
+
+        </div>
+
 
 </body>
 
 </html>
+<script>
+    const perguntas = [
+        {
+            q: "Qual componente do computador pode ser comparado ao cérebro humano?",
+            ops: ["CPU", "GPU", "RAM", "SSD"],
+            r: "CPU",
+            exp: "A CPU é o cérebro do computador — processa e coordena todas as operações."
+        },
+        {
+            q: "Componente da CPU responsável por executar operações matemáticas e lógicas (como um aluno resolvendo cálculos):",
+            ops: ["ULA", "UC", "Registrador", "BIOS"],
+            r: "ULA",
+            exp: "A ULA (Unidade Lógica e Aritmética) executa todos os cálculos e operações lógicas da CPU."
+        },
+        {
+            q: "Componente da CPU comparado a um cartório com cadernos para armazenar dados temporários:",
+            ops: ["Registradores", "Cache L1", "ROM", "Barramento"],
+            r: "Registradores",
+            exp: "Os Registradores são pequenas memórias dentro da CPU para armazenar dados temporários durante o processamento."
+        },
+        {
+            q: "Memória temporária — armazena dados enquanto o computador está ligado e perde tudo ao desligar:",
+            ops: ["RAM", "ROM", "EPROM", "Flash"],
+            r: "RAM",
+            exp: "A RAM é volátil: perde os dados quando o computador é desligado."
+        },
+        {
+            q: "Memória permanente que guarda dados essenciais como o BIOS e não pode ser regravada:",
+            ops: ["ROM", "RAM", "Flash", "Cache"],
+            r: "ROM",
+            exp: "A ROM é não volátil e somente leitura — armazena o firmware essencial do sistema."
+        },
+        {
+            q: "Memória não volátil derivada da ROM que permite apagar e regravar conteúdo (útil para atualizações de firmware):",
+            ops: ["EPROM", "RAM", "Cache L2", "Registrador"],
+            r: "EPROM",
+            exp: "A EPROM pode ter seu conteúdo apagado e regravado, diferente da ROM tradicional."
+        },
+        {
+            q: "Tecnologia de armazenamento não volátil usada em pen drives, SSDs e cartões de memória:",
+            ops: ["Flash", "EPROM", "RAM", "DMA"],
+            r: "Flash",
+            exp: "A memória Flash é a base dos armazenamentos modernos: rápida, resistente a choques e de baixo consumo."
+        },
+        {
+            q: "Também chamada de memória secundária, armazena grandes volumes de dados de forma permanente e é conhecida por dois nomes específicos:",
+            ops: ["Memória de Massa", "RAM", "Cache", "EPROM"],
+            r: "Memória de Massa",
+            exp: "A Memória de Massa (HD e SSD) armazena grandes volumes de dados de forma não volátil."
+        },
+        {
+            q: "Recurso que permite a um dispositivo acessar a memória RAM diretamente, sem passar pela CPU (o 'atalho' do trânsito):",
+            ops: ["DMA", "Cache L2", "Barramento PCI", "IRQ"],
+            r: "DMA",
+            exp: "O DMA (Direct Memory Access) libera a CPU ao permitir transferências diretas entre dispositivos e a memória."
+        },
+        {
+            q: "Pino de controle em chips que ativa um dispositivo específico no barramento — tem apelido igual ao de um famoso jogo FPS:",
+            ops: ["Chip Select (CS)", "Reset Pin", "Clock Enable", "Interrupt Request"],
+            r: "Chip Select (CS)",
+            exp: "O Chip Select (CS) seleciona qual chip no barramento será ativado. O apelido CS vem do jogo Counter-Strike!"
+        },
+        {
+            q: "Qual barramento é responsável por transportar os dados entre os componentes?",
+            ops: ["Barramento de dados", "Barramento de endereço", "Barramento de controle", "Barramento PCI"],
+            r: "Barramento de dados",
+            exp: "O Barramento de Dados carrega os dados que trafegam entre CPU, memória e dispositivos."
+        },
+        {
+            q: "Qual barramento indica o endereço de memória onde os dados devem ser lidos ou gravados?",
+            ops: ["Barramento de endereço", "Barramento de dados", "Barramento de controle", "Barramento USB"],
+            r: "Barramento de endereço",
+            exp: "O Barramento de Endereço especifica a localização na memória que será acessada."
+        },
+        {
+            q: "Qual barramento sinaliza o tipo de operação a ser realizada (leitura, escrita, etc.)?",
+            ops: ["Barramento de controle", "Barramento de dados", "Barramento de endereço", "Barramento SATA"],
+            r: "Barramento de controle",
+            exp: "O Barramento de Controle coordena as operações, indicando se é leitura ou escrita, entre outros sinais."
+        },
+        {
+            q: "Processador com 10 núcleos, 16 threads, turbo máximo de 4.7 GHz e 20 MB de cache. Qual é ele?",
+            ops: ["i5", "i7", "i3", "i9"],
+            r: "i5",
+            exp: "Essas são as especificações do Intel Core i5-14400, da 14ª geração (Raptor Lake Refresh)."
+        },
+        {
+            q: "Processador com 20 núcleos, 28 threads, turbo máximo de 5.6 GHz, 33 MB de cache e TDP de 253W. Qual é ele?",
+            ops: ["i7", "i5", "i3", "i9"],
+            r: "i7",
+            exp: "Essas são as especificações do Intel Core i7-14700K, com desempenho muito superior ao i5."
+        },
+        {
+            q: "Como é chamado um processador com 2 núcleos físicos?",
+            ops: ["Dual Core", "Quad Core", "Hexa Core", "Octa Core"],
+            r: "Dual Core",
+            exp: "Dual Core = 2 núcleos físicos. O nome do processador sempre se refere aos núcleos físicos, não aos threads lógicos."
+        }
+    ];
+
+      let atual = 0;
+      let pontos = 0;
+      let respondeu = false;
+
+  function jogar(){
+    document.getElementById('title').style.display = 'none';
+    document.getElementById('container_Perguntas').style.display = 'flex';
+    document.getElementById('btnIniciar').style.display = 'flex';
+    document.getElementById('btnProximo').style.display = 'none';
+    document.getElementById('quiz').style.display = 'block';
+  }
+        
+  function iniciar() {
+    document.getElementById('container_Perguntas').style.display = 'none';
+    document.getElementById('card').style.display = 'block';
+    document.getElementById('quiz').style.display = 'block';
+    mostrar();
+  }
+ 
+  function mostrar() {
+    respondeu = false;
+    const p = perguntas[atual];
+    document.getElementById('progresso').textContent = 'Questão ' + (atual + 1) + ' de ' + perguntas.length;
+    document.getElementById('questao').textContent = p.q;
+    document.getElementById('feedback').style.display = 'none';
+    document.getElementById('btnProximo').style.display = 'none';
+ 
+    const div = document.getElementById('opcoes');
+    div.innerHTML = '';
+    p.ops.forEach(function(op) {
+      const btn = document.createElement('button');
+      btn.className = 'opcao';
+      btn.textContent = op;
+      btn.onclick = function() { responder(op, btn); };
+      div.appendChild(btn);
+    });
+  }
+ 
+  function responder(escolha, btn) {
+    if (respondeu) return;
+    respondeu = true;
+    const p = perguntas[atual];
+    const certa = escolha === p.r;
+    if (certa) pontos++;
+ 
+    document.querySelectorAll('.opcao').forEach(function(b) {
+      b.disabled = true;
+      if (b.textContent === p.r) b.classList.add('certa');
+      else if (b === btn && !certa) b.classList.add('errada');
+    });
+ 
+    const fb = document.getElementById('feedback');
+    fb.className = 'feedback ' + (certa ? 'certa' : 'errada');
+    fb.textContent = (certa ? ' Correto! ' : ' Errado. ') + p.exp;
+    fb.style.display = 'block';
+ 
+    const prox = document.getElementById('btnProximo');
+    prox.style.display = 'inline-block';
+    prox.textContent = atual < perguntas.length - 1 ? 'Próxima →' : 'Ver resultado';
+  }
+ 
+  function proxima() {
+    atual++;
+    if (atual >= perguntas.length) { resultado(); return; }
+    mostrar();
+  }
+ 
+  function resultado() {
+    document.getElementById('quiz').style.display = 'none';
+    document.getElementById('resultado').style.display = 'block';
+    document.getElementById('pontuacao').textContent = 'Você acertou ' + pontos + ' de ' + perguntas.length + ' questões.';
+    const pct = pontos / perguntas.length;
+    const msg = pct === 1 ? 'Perfeito! Domínio total!' : pct >= 0.7 ? 'Muito bem!' : pct >= 0.4 ? 'Bom esforço, continue estudando!' : 'Revise o conteúdo e tente novamente!';
+    document.getElementById('mensagem').textContent = msg;
+  }
+
+  function reiniciar(){
+    location.reload();
+  }
+
+
+</script>
